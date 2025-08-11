@@ -18,11 +18,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: latest
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,7 +29,10 @@ jobs:
           node-version: '22'
           cache: 'pnpm'
 
-      - name: Build
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
         run: pnpm run build
 
       - name: Run main logic
@@ -40,3 +42,6 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           ORIGIN_HEADER: ${{ secrets.ORIGIN_HEADER }}
         run: node build/main.mjs
+
+      - name: Log completion
+        run: echo "MCServerManager finished at $(date)"
