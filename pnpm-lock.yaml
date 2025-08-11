@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      sockette:
-        specifier: ^2.0.6
-        version: 2.0.6
     devDependencies:
       '@types/node':
         specifier: ^24.2.1
@@ -185,9 +181,6 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  sockette@2.0.6:
-    resolution: {integrity: sha512-W6iG8RGV6Zife3Cj+FhuyHV447E6fqFM2hKmnaQrTvg3OydINV3Msj3WPFbX76blUlUxvQSMMMdrJxce8NqI5Q==}
-
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
 
@@ -303,7 +296,5 @@ snapshots:
       '@esbuild/win32-arm64': 0.25.8
       '@esbuild/win32-ia32': 0.25.8
       '@esbuild/win32-x64': 0.25.8
-
-  sockette@2.0.6: {}
 
   undici-types@7.10.0: {}
