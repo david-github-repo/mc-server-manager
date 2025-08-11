@@ -1,0 +1,21 @@
+{
+  "name": "mc-server-manager",
+  "version": "0.0.1",
+  "description": "Programmatically start and stop a Minecraft server.",
+  "keywords": [
+    "Minecraft"
+  ],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --format=esm --target=esnext --platform=node --packages=external --outfile=build/main.mjs",
+    "build:watch": "esbuild src/main.ts --bundle --watch --format=esm --target=esnext --platform=node --packages=external --outfile=build/main.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "esbuild": "^0.25.8"
+  },
+  "dependencies": {}
+}
